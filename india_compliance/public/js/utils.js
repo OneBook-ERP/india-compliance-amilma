@@ -384,11 +384,11 @@ Object.assign(india_compliance, {
             message_list.push("Transaction Name must be 20 characters or fewer to meet GST requirements");
         }
 
-        if (!GST_INVOICE_NUMBER_FORMAT.test(invoice_number)) {
-            message_list.push(
-                "Transaction Name should start with an alphanumeric character and can only contain alphanumeric characters, dash (-) and slash (/) to meet GST requirements.",
-            );
-        }
+        // if (!GST_INVOICE_NUMBER_FORMAT.test(invoice_number)) {
+        //     message_list.push(
+        //         "Transaction Name should start with an alphanumeric character and can only contain alphanumeric characters, dash (-) and slash (/) to meet GST requirements.",
+        //     );
+        // }
 
         return message_list;
     },
