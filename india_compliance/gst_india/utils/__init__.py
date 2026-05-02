@@ -924,7 +924,7 @@ def disable_new_gst_category_notification():
 def validate_invoice_number(doc, throw=True):
     """Validate GST invoice number requirements."""
 
-    is_valid_length = len(doc.name) <= 16
+    is_valid_length = len(doc.name) <= 20
     is_valid_format = GST_INVOICE_NUMBER_FORMAT.match(doc.name)
 
     if not throw:
@@ -936,7 +936,7 @@ def validate_invoice_number(doc, throw=True):
     title = _("Invalid GST Transaction Name")
 
     if not is_valid_length:
-        message = _("Transaction Name must be 16 characters or fewer to meet GST requirements")
+        message = _("Transaction Name must be 20 characters or fewer to meet GST requirements")
     else:
         message = _(
             "Transaction Name should start with an alphanumeric character and can"
