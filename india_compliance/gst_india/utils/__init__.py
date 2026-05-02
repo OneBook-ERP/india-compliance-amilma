@@ -925,12 +925,12 @@ def validate_invoice_number(doc, throw=True):
     """Validate GST invoice number requirements."""
 
     is_valid_length = len(doc.name) <= 20
-    is_valid_format = GST_INVOICE_NUMBER_FORMAT.match(doc.name)
+    # is_valid_format = GST_INVOICE_NUMBER_FORMAT.match(doc.name)
 
     if not throw:
-        return is_valid_length and is_valid_format
+        return is_valid_length
 
-    if is_valid_length and is_valid_format:
+    if is_valid_length:
         return
 
     title = _("Invalid GST Transaction Name")
