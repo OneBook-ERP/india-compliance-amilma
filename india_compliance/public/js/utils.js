@@ -380,8 +380,8 @@ Object.assign(india_compliance, {
     validate_invoice_number(invoice_number) {
         // returns a list of error messages if invoice number is invalid
         let message_list = [];
-        if (invoice_number.length > 16) {
-            message_list.push("Transaction Name must be 16 characters or fewer to meet GST requirements");
+        if (invoice_number.length > 20) {
+            message_list.push("Transaction Name must be 20 characters or fewer to meet GST requirements");
         }
 
         if (!GST_INVOICE_NUMBER_FORMAT.test(invoice_number)) {
