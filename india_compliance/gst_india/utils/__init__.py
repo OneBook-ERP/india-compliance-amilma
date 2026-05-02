@@ -937,11 +937,11 @@ def validate_invoice_number(doc, throw=True):
 
     if not is_valid_length:
         message = _("Transaction Name must be 20 characters or fewer to meet GST requirements")
-    else:
-        message = _(
-            "Transaction Name should start with an alphanumeric character and can"
-            " only contain alphanumeric characters, dash (-) and slash (/) to meet GST requirements"
-        )
+    # else:
+    #     message = _(
+    #         "Transaction Name should start with an alphanumeric character and can"
+    #         " only contain alphanumeric characters, dash (-) and slash (/) to meet GST requirements"
+    #     )
 
     if doc.doctype == "Sales Invoice":
         frappe.throw(message, title=title)
